@@ -1,11 +1,5 @@
-import java.sql.DriverManager;
-import java.util.concurrent.ConcurrentLinkedQueue;
-import java.util.concurrent.LinkedBlockingQueue;
-import java.util.concurrent.atomic.AtomicInteger;
+package edu.zju.algorithm.leetcode;
 
-/**
- * Created by admin on 2016/3/6.
- */
 public class DecodeWays {
     public int numDecodings(String s) {
         return 0;

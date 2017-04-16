@@ -1,8 +1,5 @@
-import javax.swing.*;
+package edu.zju.algorithm.leetcode;
 
-/**
- * Created by admin on 2015/12/20.
- */
 public class GameOfLife {
     public void gameOfLife(int[][] board) {
         int m = board.length;

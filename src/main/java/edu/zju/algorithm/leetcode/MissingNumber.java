@@ -1,6 +1,5 @@
-/**
- * Created by admin on 2015/12/19.
- */
+package edu.zju.algorithm.leetcode;
+
 public class MissingNumber {
     public int missingNumber(int[] nums) {
         int total = 0;

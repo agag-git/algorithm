@@ -1,6 +1,7 @@
-/**
- * Created by admin on 2015/9/11.
- */
+package edu.zju.algorithm.leetcode;
+
+import edu.zju.algorithm.leetcode.util.TreeNode;
+
 public class BinaryTreeMaximumPathSum {
     public int maxPathSum(TreeNode root) {
         return 0;

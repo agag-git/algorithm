@@ -1,17 +1,9 @@
+package edu.zju.algorithm.leetcode;
+
+import edu.zju.algorithm.leetcode.util.TreeNode;
+
 import java.util.ArrayList;
 import java.util.List;
-
-/**
- * Created by admin on 2015/9/11.
- */
-
-//Definition for a binary tree node.
-//class TreeNode {
-//    int val;
-//    TreeNode left;
-//    TreeNode right;
-//    TreeNode(int x) { val = x; }
-//}
 
 public class BinaryTreePreorderTraversal {
     public List<Integer> preorderTraversal(TreeNode root) {
@@ -28,3 +20,5 @@ public class BinaryTreePreorderTraversal {
         return list;
     }
 }
+
+

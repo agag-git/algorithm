@@ -1,9 +1,8 @@
+package edu.zju.algorithm.leetcode;
+
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by admin on 2015/12/22.
- */
 public class InsertInterval {
     public List<Interval> insert(List<Interval> intervals, Interval newInterval) {
         List<Interval> newList = new ArrayList<>();
@@ -42,11 +41,12 @@ public class InsertInterval {
             newList.add(temp);
         return newList;
     }
+
+    private static class Interval {
+        int start;
+        int end;
+        Interval() { start = 0; end = 0; }
+        Interval(int s, int e) { start = s; end = e; }
+    }
 }
 
-class Interval {
-    int start;
-    int end;
-    Interval() { start = 0; end = 0; }
-    Interval(int s, int e) { start = s; end = e; }
-}

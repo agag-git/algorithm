@@ -1,6 +1,5 @@
-/**
- * Created by admin on 2015/12/24.
- */
+package edu.zju.algorithm.leetcode;
+
 public class WordSearch {
     public boolean exist(char[][] board, String word) {
         if (board == null)

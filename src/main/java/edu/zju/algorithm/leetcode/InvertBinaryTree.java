@@ -1,14 +1,6 @@
-/**
- * Created by admin on 2015/9/10.
- */
+package edu.zju.algorithm.leetcode;
 
-//Definition for a binary tree node.
-class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
-    TreeNode(int x) { val = x; }
-}
+import edu.zju.algorithm.leetcode.util.TreeNode;
 
 public class InvertBinaryTree {
     public TreeNode invertTree(TreeNode root) {

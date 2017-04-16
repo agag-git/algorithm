@@ -1,8 +1,5 @@
-import java.util.HashMap;
+package edu.zju.algorithm.leetcode;
 
-/**
- * Created by admin on 2016/3/6.
- */
 public class SelfCrossing {
     public boolean isSelfCrossing(int[] x) {
         int[][] nodes = new int[5][2];

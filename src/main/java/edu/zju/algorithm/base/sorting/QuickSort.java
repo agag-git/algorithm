@@ -116,27 +116,28 @@ public class QuickSort {
         for (Element e : array)
             System.out.println(e.getValue());
     }
+
+    private static class Element implements Comparable {
+        private int value;
+        public Element(){
+            value = 0;
+        }
+        public Element(int value){
+            this.value = value;
+        }
+
+        public int getValue() {
+            return value;
+        }
+
+        public void setValue(int value) {
+            this.value = value;
+        }
+
+        @Override
+        public int compareTo(Object o) {
+            return value - ((Element)o).getValue();
+        }
+    }
 }
 
-class Element implements Comparable {
-    private int value;
-    public Element(){
-        value = 0;
-    }
-    public Element(int value){
-        this.value = value;
-    }
-
-    public int getValue() {
-        return value;
-    }
-
-    public void setValue(int value) {
-        this.value = value;
-    }
-
-    @Override
-    public int compareTo(Object o) {
-        return value - ((Element)o).getValue();
-    }
-}

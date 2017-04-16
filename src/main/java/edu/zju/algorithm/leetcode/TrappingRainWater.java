@@ -1,6 +1,5 @@
-/**
- * Created by admin on 2015/12/23.
- */
+package edu.zju.algorithm.leetcode;
+
 public class TrappingRainWater {
     public int trap(int[] height) {
         if (height.length < 3)

@@ -1,11 +1,7 @@
-import com.sun.org.apache.xml.internal.resolver.helpers.PublicId;
+package edu.zju.algorithm.leetcode;
 
-import java.util.ArrayList;
-import java.util.List;
+import edu.zju.algorithm.leetcode.util.TreeNode;
 
-/**
- * Created by admin on 2015/9/11.
- */
 public class ValidateBinarySearchTree {
     private int lastMin = Integer.MIN_VALUE;
     private boolean first = true;

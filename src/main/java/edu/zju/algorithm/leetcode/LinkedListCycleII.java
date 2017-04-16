@@ -1,6 +1,5 @@
-/**
- * Created by admin on 2015/12/22.
- */
+package edu.zju.algorithm.leetcode;
+
 public class LinkedListCycleII {
     public ListNode detectCycle(ListNode head) {
         if (head == null)

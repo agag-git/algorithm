@@ -1,6 +1,5 @@
-/**
- * Created by admin on 2015/9/14.
- */
+package edu.zju.algorithm.leetcode;
+
 public class MinimumPathSum {
     int[][] minSum;
     public int minPathSum(int[][] grid) {

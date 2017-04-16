@@ -1,9 +1,10 @@
+package edu.zju.algorithm.leetcode;
+
+import edu.zju.algorithm.leetcode.util.TreeNode;
+
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by admin on 2015/9/14.
- */
 public class BinaryTreeInorderTraversal {
     private List<Integer> list = new ArrayList<>();
     public List<Integer> inorderTraversal(TreeNode root) {

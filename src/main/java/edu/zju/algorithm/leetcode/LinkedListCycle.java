@@ -1,8 +1,4 @@
-import java.awt.*;
-
-/**
- * Created by admin on 2015/12/22.
- */
+package edu.zju.algorithm.leetcode;
 
 public class LinkedListCycle {
     public boolean hasCycle(ListNode head) {
@@ -20,11 +16,3 @@ public class LinkedListCycle {
     }
 }
 
-class ListNode {
-    int val;
-    ListNode next;
-    ListNode(int x) {
-        val = x;
-        next = null;
-    }
-}

@@ -1,6 +1,5 @@
-/**
- * Created by admin on 2015/12/20.
- */
+package edu.zju.algorithm.leetcode;
+
 public class MaximumSubarray {
     public int maxSubArray(int[] nums) {
         int sum = nums[0];

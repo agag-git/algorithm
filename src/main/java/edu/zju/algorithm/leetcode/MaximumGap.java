@@ -1,8 +1,5 @@
-import java.util.List;
+package edu.zju.algorithm.leetcode;
 
-/**
- * Created by admin on 2015/12/22.
- */
 public class MaximumGap {
     public int maximumGap(int[] nums) {
         int length = nums.length;

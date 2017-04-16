@@ -1,6 +1,5 @@
-/**
- * Created by admin on 2016/3/6.
- */
+package edu.zju.algorithm.leetcode;
+
 public class CoinChange {
     public int coinChange(int[] coins, int amount) {
         int[] num = new int[amount+1];

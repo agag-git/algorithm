@@ -1,6 +1,5 @@
-/**
- * Created by admin on 2015/12/20.
- */
+package edu.zju.algorithm.leetcode;
+
 public class SearchInsertPosition {
     public int searchInsert(int[] nums, int target) {
         int length = nums.length;
