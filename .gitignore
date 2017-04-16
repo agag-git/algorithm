@@ -1,0 +1,12 @@
+target/
+.myeclipse/
+.settings/*
+*.classpath
+.mymetadata
+.project
+src/main/webapp/WEB-INF/classes/
+src/main/webapp/WEB-INF/lib/
+*.class
+.idea/*
+*.iml
+**/_repo.idx
