@@ -1,7 +1,13 @@
 package edu.zju.algorithm.base.datastructure.queue;
 
 public interface Queue<E> {
-    public E poll();
+    public boolean isFull();
 
-    public boolean add(E e);
+    public boolean isEmpty();
+
+    public int size();
+
+    public E pop();
+
+    public boolean push(E e);
 }

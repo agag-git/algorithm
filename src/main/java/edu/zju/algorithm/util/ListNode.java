@@ -1,8 +1,9 @@
-package edu.zju.algorithm.leetcode.util;
+package edu.zju.algorithm.util;
 
 public class ListNode {
     public int val;
     public ListNode next;
+    public ListNode random;
 
     public ListNode(){}
 

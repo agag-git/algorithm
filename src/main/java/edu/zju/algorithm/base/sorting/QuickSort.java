@@ -4,7 +4,15 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Stack;
 
+/**
+ * 快排实现
+ */
 public class QuickSort {
+    /**
+     * 数组乱序，避免最坏情况
+     * @param array
+     * @param <T>
+     */
     public static <T> void ramdomize(T[] array) {
         int ran = (int)(Math.random() * array.length);
         T temp = array[0];
@@ -12,6 +20,13 @@ public class QuickSort {
         array[ran] = temp;
     }
 
+    /**
+     * 递归方式实现快排
+     * @param array
+     * @param left
+     * @param right
+     * @param <T>
+     */
     public static <T extends Comparable> void sortRecursively(T[] array, int left, int right) {
         if (left == right)
             return;
@@ -31,6 +46,11 @@ public class QuickSort {
             sortRecursively(array, current + 1, right);
     }
 
+    /**
+     * 非递归方式实现快排 - 栈
+     * @param array
+     * @param <T>
+     */
     public static <T extends Comparable> void sortWithStack(T[] array) {
         if (array.length <= 1)
             return;
@@ -61,6 +81,11 @@ public class QuickSort {
         }
     }
 
+    /**
+     * 非递归方式实现快排 - 队列
+     * @param array
+     * @param <T>
+     */
     public static <T extends Comparable> void sortWithQueue(T[] array) {
         if (array.length <= 1)
             return;
@@ -91,6 +116,12 @@ public class QuickSort {
         }
     }
 
+    /**
+     * 整型快排
+     * @param array
+     * @param left
+     * @param right
+     */
     public static void sortIntInc(int[] array, int left, int right) {
         if (array.length <= 1)
             return;

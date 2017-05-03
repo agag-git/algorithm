@@ -1,4 +1,4 @@
-package edu.zju.algorithm.leetcode.util;
+package edu.zju.algorithm.util;
 
 public class RandomListNode {
     public int label;

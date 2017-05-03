@@ -1,18 +1,22 @@
 package edu.zju.algorithm.base.datastructure.queue;
 
-public class QueueWithArray<E> implements edu.zju.algorithm.base.datastructure.queue.Queue<E> {
-    Object[] arr;
-    int size = 0;
-    int head = 0;
-    int tail = 0;
+/**
+ * 数组实现队列
+ * @param <E>
+ */
+public class QueueWithArray<E> implements Queue<E> {
+    private Object[] arr;
+    private int capacity = 0;
+    private int head = 0;
+    private int tail = 0;
 
     public QueueWithArray(int initSize) {
-        size = initSize;
-        arr = new Object[size];
+        capacity = initSize;
+        arr = new Object[capacity];
     }
 
     public boolean isFull() {
-        return (tail + 1) % size == head;
+        return (tail + 1) % capacity == head;
     }
 
     public boolean isEmpty() {
@@ -20,22 +24,27 @@ public class QueueWithArray<E> implements edu.zju.algorithm.base.datastructure.q
     }
 
     @Override
-    public E poll() {
+    public int size() {
+        return (tail + capacity - head) % capacity;
+    }
+
+    @Override
+    public E pop() {
         if (isEmpty()) {
             return null;
         }
         E ele = (E)arr[head];
-        head = (head + 1) % size;
+        head = (head + 1) % capacity;
         return ele;
     }
 
     @Override
-    public boolean add(E e) {
+    public boolean push(E e) {
         if (isFull()) {
             return false;
         }
         arr[tail] = e;
-        tail = (tail + 1) % size;
+        tail = (tail + 1) % capacity;
         return true;
     }
 

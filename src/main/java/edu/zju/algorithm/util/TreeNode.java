@@ -1,4 +1,4 @@
-package edu.zju.algorithm.leetcode.util;
+package edu.zju.algorithm.util;
 
 //Definition for a binary tree node.
 public class TreeNode {

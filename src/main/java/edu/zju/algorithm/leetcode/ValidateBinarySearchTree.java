@@ -1,6 +1,6 @@
 package edu.zju.algorithm.leetcode;
 
-import edu.zju.algorithm.leetcode.util.TreeNode;
+import edu.zju.algorithm.util.TreeNode;
 
 public class ValidateBinarySearchTree {
     private int lastMin = Integer.MIN_VALUE;
