@@ -1,5 +1,7 @@
 package edu.zju.algorithm.leetcode;
 
+import edu.zju.algorithm.util.ListNode;
+
 public class LinkedListCycle {
     public boolean hasCycle(ListNode head) {
         if (head == null)

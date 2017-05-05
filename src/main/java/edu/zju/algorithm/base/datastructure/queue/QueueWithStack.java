@@ -7,7 +7,6 @@ import java.util.Stack;
  * @param <E>
  */
 public class QueueWithStack<E> implements Queue<E> {
-    private int size = 0;
     private Stack<E> pushStack = new Stack<>();
     private Stack<E> popStack = new Stack<>();
 

@@ -8,7 +8,7 @@ import edu.zju.algorithm.util.ListNode;
 public class List {
 
     /**
-     * 链表复制 - 带random指针的链表深拷贝，不使用额外空间
+     * 链表复制 - 带random指针的链表深拷贝
      * @param head 链表头节点
      */
     public ListNode copyList(ListNode head) {
@@ -19,17 +19,21 @@ public class List {
             node.next = newNode;
             node = newNode.next;
         }
+        ListNode res = head.next;
         node = head;
         while (node != null) {
             node.next.random = node.random.next;
             node = node.next.next;
         }
-        node = head.next;
-        while (node.next != null) {
-            node.next = node.next.next;
-            node = node.next;
+        ListNode node1 = head;
+        ListNode node2 = head.next;
+        while (node1 != null) {
+            node1.next = node2.next;
+            node1 = node1.next;
+            node2.next = node1.next;
+            node2 = node2.next;
         }
-        return head.next;
+        return res;
     }
 
     /**
