@@ -2,6 +2,7 @@ package edu.zju.algorithm.base.datastructure.graph;
 
 import java.util.LinkedList;
 import java.util.Queue;
+import java.util.Scanner;
 
 /**
  * 邻接表 - 用数组实现
@@ -12,11 +13,16 @@ public class AdjacencyListWithArray {
     public Edge[] edges;
     public int total;
     public int[] head;
+    /**
+     * directed 为 true 则表示是有向图，否则为无向图
+     */
+    private boolean directed;
 
-    public AdjacencyListWithArray(int edgeNum, int vertexNum) {
+    public AdjacencyListWithArray(int edgeNum, int vertexNum, boolean directed) {
         this.edgeNum = edgeNum;
         this.vertexNum = vertexNum;
-        edges = new Edge[edgeNum];
+        this.directed = directed;
+        edges = new Edge[2 * edgeNum];
         head = new int[vertexNum];
         for (int i = 0; i < vertexNum; i++) {
             head[i] = -1;
@@ -28,6 +34,23 @@ public class AdjacencyListWithArray {
         edge.next = head[s];
         head[s] = total;
         edges[total++] = edge;
+    }
+
+    public static AdjacencyListWithArray buildGraph(boolean directed) {
+        Scanner scanner = new Scanner(System.in);
+        int e = scanner.nextInt();
+        int v = scanner.nextInt();
+        AdjacencyListWithArray list = new AdjacencyListWithArray(e, v, directed);
+        for (int i = 0; i < e; i++) {
+            int s = scanner.nextInt();
+            int t = scanner.nextInt();
+            int w = scanner.nextInt();
+            list.addEdge(s, t, w);
+            if (!directed) {
+                list.addEdge(t, s, w);
+            }
+        }
+        return list;
     }
 
     private boolean[] mark = new boolean[vertexNum];
@@ -78,10 +101,10 @@ public class AdjacencyListWithArray {
     /**
      * 图中的边
      */
-    private class Edge {
-        int target;
-        int weight;
-        int next;
+    public class Edge {
+        public int target;
+        public int weight;
+        public int next;
 
         public Edge(int t, int w) {
             target = t;

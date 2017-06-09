@@ -2,6 +2,7 @@ package edu.zju.algorithm.base.datastructure.graph;
 
 import java.util.LinkedList;
 import java.util.Queue;
+import java.util.Scanner;
 
 /**
  * 邻接表 - 用链表实现
@@ -9,10 +10,15 @@ import java.util.Queue;
 public class AdjacencyListWithLinkedList {
     public int vertexNum;
     public Edge[] edges;
+    /**
+     * directed 为 true 则表示是有向图，否则为无向图
+     */
+    private boolean directed;
 
-    public AdjacencyListWithLinkedList(int vertexNum) {
+    public AdjacencyListWithLinkedList(int vertexNum, boolean directed) {
         this.vertexNum = vertexNum;
         edges = new Edge[vertexNum];
+        this.directed = directed;
     }
 
     public void addEdge(int s, int t, int w) {
@@ -22,6 +28,22 @@ public class AdjacencyListWithLinkedList {
     }
 
     private boolean mark[] = new boolean[vertexNum];
+
+    public static AdjacencyListWithLinkedList buildGraph(boolean directed) {
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+        AdjacencyListWithLinkedList list = new AdjacencyListWithLinkedList(n, directed);
+        for (int i = 0; i < n; i++) {
+            int s = scanner.nextInt();
+            int t = scanner.nextInt();
+            int w = scanner.nextInt();
+            list.addEdge(s, t, w);
+            if (!directed) {
+                list.addEdge(t, s, w);
+            }
+        }
+        return list;
+    }
 
     /**
      * 深搜遍历图
@@ -69,7 +91,7 @@ public class AdjacencyListWithLinkedList {
     /**
      * 图中的边
      */
-    private class Edge {
+    public class Edge {
         public int target;
         public int weight;
         public Edge next;
