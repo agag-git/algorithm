@@ -1,6 +1,5 @@
 package edu.zju.algorithm.base.graph;
 
-import com.sun.javafx.geom.Edge;
 import edu.zju.algorithm.base.datastructure.graph.AdjacencyListWithArray;
 
 import java.util.PriorityQueue;
